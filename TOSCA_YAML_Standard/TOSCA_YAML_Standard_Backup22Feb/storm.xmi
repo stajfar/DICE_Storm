@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tosca_yaml_standard:Service_Template xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tosca_yaml_standard="http://tosca_yaml_standard/1.0" tosca_definition_version="cloudify_dsl_1_1" description="this is the desc of service template">
+  <serviceTemplate_hasImport file="http://www.getcloudify.org/spec/cloudify/3.2.1/types.yaml"/>
+  <serviceTemplate_hasImport file="http://www.getcloudify.org/spec/openstack-plugin/1.2.1/plugin.yaml"/>
+  <serviceTemplate_hasImport file="http://www.getcloudify.org/spec/chef-plugin/1.2/plugin.yaml"/>
+  <serviceTemplate_hasImport file="types/dice.yaml"/>
+  <service_hasNodeTemplate node_template_name="zookeeper_floating_ip" type="cloudify.openstack.nodes.FloatingIP"/>
+  <service_hasNodeTemplate node_template_name="storm_floating_ip" type="cloudify.openstack.nodes.FloatingIP"/>
+  <service_hasNodeTemplate node_template_name="storm_nimbus" type="dice.storm_nimbus">
+    <nodeTemplate_hasInterface type="cloudify.interfaces.lifecycle">
+      <hasOperation operation_name="create" description="">
+        <operation_hasImplementation primary_script="scripts/configure_hosts.sh"/>
+      </hasOperation>
+    </nodeTemplate_hasInterface>
+    <NodeTemplate_hasRelationship type="cloudify.relationships.contained_in" validTarget="storm_nimbus_host">
+      <relation_haSourceInterface name="" type="cloudify.interfaces.relationship_lifecycle">
+        <hasOperation operation_name="preconfigure">
+          <operation_hasImplementation primary_script="scripts/connect_storm_to_nimbus.sh"/>
+        </hasOperation>
+      </relation_haSourceInterface>
+    </NodeTemplate_hasRelationship>
+    <NodeTemplate_hasRelationship type="cloudify.relationships.connected_to" validSource="" validTarget="zookeeper">
+      <relation_haSourceInterface name="" type="cloudify.interfaces.relationship_lifecycle">
+        <hasOperation operation_name="preconfigure">
+          <operation_hasImplementation primary_script="scripts/connect_storm_to_zookeeper.sh"/>
+        </hasOperation>
+      </relation_haSourceInterface>
+    </NodeTemplate_hasRelationship>
+  </service_hasNodeTemplate>
+</tosca_yaml_standard:Service_Template>

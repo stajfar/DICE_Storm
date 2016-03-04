@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:tosca_yaml_standard="http://tosca_yaml_standard/1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_JCrIYNZmEeWi8JsrviIkjg" version="8.1.0">
+  <models xmi:type="ecore:EPackage" href="http://www.eclipse.org/emf/2002/Ecore#/"/>
+  <models xmi:type="ecore:EPackage" href="TOSCA_YAML_Standard/TOSCA_YAML_Standard.ecore#/"/>
+  <models xmi:type="notation:Diagram" href="TOSCA_YAML_Standard/TOSCA_YAML_Standard.ecorediag#_VfMHsNZLEeWi8JsrviIkjg"/>
+  <models xmi:type="ecore:EPackage" href="TOSCA_YAML_Standard_Backup22Feb/TOSCA_YAML_Standard.ecore#/"/>
+  <models xmi:type="notation:Diagram" href="TOSCA_YAML_Standard_Backup22Feb/TOSCA_YAML_Standard.ecorediag#_VfMHsNZLEeWi8JsrviIkjg"/>
+  <models xmi:type="genmodel:GenModel" href="TOSCA_YAML_Standard_Backup22Feb/TOSCA_YAML_Standard.genmodel#/"/>
+  <models xmi:type="genmodel:GenModel" href="TOSCA_YAML_Standard/TOSCA_YAML_Standard.genmodel#/"/>
+  <models xmi:type="tosca_yaml_standard:Service_Template" href="TOSCA_YAML_Standard/storm.xmi#/"/>
+  <models xmi:type="tosca_yaml_standard:Service_Template" href="TOSCA_YAML_Standard_Backup22Feb/storm.xmi#/"/>
+</viewpoint:DAnalysis>

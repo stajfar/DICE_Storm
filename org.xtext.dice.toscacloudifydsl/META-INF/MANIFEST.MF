@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.dice.toscacloudifydsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.dice.toscacloudifydsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext;visibility:=reexport,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ TOSCA_YAML_Standard,
+ org.eclipse.xtext.util,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.xtext.dice.toscacloudifydsl,
+ org.xtext.dice.toscacloudifydsl.services,
+ org.xtext.dice.toscacloudifydsl.serializer,
+ org.xtext.dice.toscacloudifydsl.parser.antlr,
+ org.xtext.dice.toscacloudifydsl.parser.antlr.internal,
+ org.xtext.dice.toscacloudifydsl.validation,
+ org.xtext.dice.toscacloudifydsl.scoping,
+ org.xtext.dice.toscacloudifydsl.generator,
+ org.xtext.dice.toscacloudifydsl.formatting

@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Parameter#getParameter_name <em>Parameter name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Parameter#getType <em>Type</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tosca_yaml_standard.Parameter#getDefault <em>Default</em>}</li>
  *   <li>{@link tosca_yaml_standard.Parameter#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getParameter()
  * @model

@@ -18,6 +18,7 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.ImportImpl#getImport_name <em>Import name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.ImportImpl#getFile <em>File</em>}</li>
@@ -25,7 +26,6 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  *   <li>{@link tosca_yaml_standard.impl.ImportImpl#getNamespace_uri <em>Namespace uri</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.ImportImpl#getNamespace_prefix <em>Namespace prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

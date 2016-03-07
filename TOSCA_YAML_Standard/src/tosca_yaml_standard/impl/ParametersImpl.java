@@ -26,10 +26,10 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.ParametersImpl#getParemeters_hasParameter <em>Paremeters has Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

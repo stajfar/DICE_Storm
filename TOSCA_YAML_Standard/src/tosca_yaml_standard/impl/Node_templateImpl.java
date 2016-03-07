@@ -33,6 +33,7 @@ import tosca_yaml_standard.instance;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.Node_templateImpl#getNode_template_name <em>Node template name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Node_templateImpl#getType <em>Type</em>}</li>
@@ -44,7 +45,6 @@ import tosca_yaml_standard.instance;
  *   <li>{@link tosca_yaml_standard.impl.Node_templateImpl#getNodeTemplate_hasRelationship <em>Node Template has Relationship</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Node_templateImpl#getNodeTemplate_hasInstances <em>Node Template has Instances</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

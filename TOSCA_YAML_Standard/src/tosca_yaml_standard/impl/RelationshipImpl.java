@@ -29,6 +29,7 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.RelationshipImpl#getType <em>Type</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.RelationshipImpl#getValidSource <em>Valid Source</em>}</li>
@@ -36,7 +37,6 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  *   <li>{@link tosca_yaml_standard.impl.RelationshipImpl#getRelation_haSourceInterface <em>Relation ha Source Interface</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.RelationshipImpl#getRelation_hasTargetInterface <em>Relation has Target Interface</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -4,7 +4,6 @@ package tosca_yaml_standard;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -1016,22 +1015,13 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	int REQUIREMENT_FEATURE_COUNT = 4;
 
 	/**
-	 * The operation id for the '<em>EOperation0</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT___EOPERATION0 = 0;
-
-	/**
 	 * The number of operations of the '<em>Requirement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_OPERATION_COUNT = 1;
+	int REQUIREMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link tosca_yaml_standard.impl.OperationImpl <em>Operation</em>}' class.
@@ -1117,22 +1107,13 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	int SERVICE_TEMPLATE = 14;
 
 	/**
-	 * The feature id for the '<em><b>Tosca definition version</b></em>' attribute.
+	 * The feature id for the '<em><b>Tosca definitions version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_TEMPLATE__DESCRIPTION = 1;
+	int SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Service Template has Import</b></em>' containment reference list.
@@ -1141,7 +1122,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT = 2;
+	int SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Service Template has Output</b></em>' containment reference list.
@@ -1150,7 +1131,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_OUTPUT = 3;
+	int SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_OUTPUT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Interface has Input</b></em>' containment reference list.
@@ -1159,7 +1140,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE__INTERFACE_HAS_INPUT = 4;
+	int SERVICE_TEMPLATE__INTERFACE_HAS_INPUT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Service has Node Template</b></em>' containment reference list.
@@ -1168,7 +1149,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE__SERVICE_HAS_NODE_TEMPLATE = 5;
+	int SERVICE_TEMPLATE__SERVICE_HAS_NODE_TEMPLATE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Service Template</em>' class.
@@ -1177,7 +1158,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_TEMPLATE_FEATURE_COUNT = 6;
+	int SERVICE_TEMPLATE_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Service Template</em>' class.
@@ -1272,67 +1253,13 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	int INSTANCE = 16;
 
 	/**
-	 * The feature id for the '<em><b>Parameter name</b></em>' attribute.
+	 * The feature id for the '<em><b>Deploy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE__PARAMETER_NAME = PARAMETER__PARAMETER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__TYPE = PARAMETER__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__DESCRIPTION = PARAMETER__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__VALUE = PARAMETER__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Required</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__REQUIRED = PARAMETER__REQUIRED;
-
-	/**
-	 * The feature id for the '<em><b>Default</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__DEFAULT = PARAMETER__DEFAULT;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INSTANCE__STATUS = PARAMETER__STATUS;
+	int INSTANCE__DEPLOY = 0;
 
 	/**
 	 * The number of structural features of the '<em>instance</em>' class.
@@ -1341,7 +1268,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
+	int INSTANCE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>instance</em>' class.
@@ -1350,7 +1277,7 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INSTANCE_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
+	int INSTANCE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link tosca_yaml_standard.impl.ParametersImpl <em>Parameters</em>}' class.
@@ -1388,98 +1315,6 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETERS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link tosca_yaml_standard.impl.Property_parameterImpl <em>Property parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tosca_yaml_standard.impl.Property_parameterImpl
-	 * @see tosca_yaml_standard.impl.Tosca_yaml_standardPackageImpl#getProperty_parameter()
-	 * @generated
-	 */
-	int PROPERTY_PARAMETER = 18;
-
-	/**
-	 * The feature id for the '<em><b>Parameter name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__PARAMETER_NAME = PARAMETER__PARAMETER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__TYPE = PARAMETER__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__DESCRIPTION = PARAMETER__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__VALUE = PARAMETER__VALUE;
-
-	/**
-	 * The feature id for the '<em><b>Required</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__REQUIRED = PARAMETER__REQUIRED;
-
-	/**
-	 * The feature id for the '<em><b>Default</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__DEFAULT = PARAMETER__DEFAULT;
-
-	/**
-	 * The feature id for the '<em><b>Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER__STATUS = PARAMETER__STATUS;
-
-	/**
-	 * The number of structural features of the '<em>Property parameter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER_FEATURE_COUNT = PARAMETER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Property parameter</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROPERTY_PARAMETER_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link tosca_yaml_standard.Node_template <em>Node template</em>}'.
@@ -1942,16 +1777,6 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	EAttribute getRequirement_Occurances();
 
 	/**
-	 * Returns the meta object for the '{@link tosca_yaml_standard.Requirement#EOperation0() <em>EOperation0</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>EOperation0</em>' operation.
-	 * @see tosca_yaml_standard.Requirement#EOperation0()
-	 * @generated
-	 */
-	EOperation getRequirement__EOperation0();
-
-	/**
 	 * Returns the meta object for class '{@link tosca_yaml_standard.Operation <em>Operation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2027,26 +1852,15 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	EClass getService_Template();
 
 	/**
-	 * Returns the meta object for the attribute '{@link tosca_yaml_standard.Service_Template#getTosca_definition_version <em>Tosca definition version</em>}'.
+	 * Returns the meta object for the attribute '{@link tosca_yaml_standard.Service_Template#getTosca_definitions_version <em>Tosca definitions version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Tosca definition version</em>'.
-	 * @see tosca_yaml_standard.Service_Template#getTosca_definition_version()
+	 * @return the meta object for the attribute '<em>Tosca definitions version</em>'.
+	 * @see tosca_yaml_standard.Service_Template#getTosca_definitions_version()
 	 * @see #getService_Template()
 	 * @generated
 	 */
-	EAttribute getService_Template_Tosca_definition_version();
-
-	/**
-	 * Returns the meta object for the attribute '{@link tosca_yaml_standard.Service_Template#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see tosca_yaml_standard.Service_Template#getDescription()
-	 * @see #getService_Template()
-	 * @generated
-	 */
-	EAttribute getService_Template_Description();
+	EAttribute getService_Template_Tosca_definitions_version();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link tosca_yaml_standard.Service_Template#getServiceTemplate_hasImport <em>Service Template has Import</em>}'.
@@ -2168,6 +1982,17 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	EClass getinstance();
 
 	/**
+	 * Returns the meta object for the attribute '{@link tosca_yaml_standard.instance#getDeploy <em>Deploy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Deploy</em>'.
+	 * @see tosca_yaml_standard.instance#getDeploy()
+	 * @see #getinstance()
+	 * @generated
+	 */
+	EAttribute getinstance_Deploy();
+
+	/**
 	 * Returns the meta object for class '{@link tosca_yaml_standard.Parameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2187,16 +2012,6 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getParameters_Paremeters_hasParameter();
-
-	/**
-	 * Returns the meta object for class '{@link tosca_yaml_standard.Property_parameter <em>Property parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Property parameter</em>'.
-	 * @see tosca_yaml_standard.Property_parameter
-	 * @generated
-	 */
-	EClass getProperty_parameter();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2592,14 +2407,6 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 		EAttribute REQUIREMENT__OCCURANCES = eINSTANCE.getRequirement_Occurances();
 
 		/**
-		 * The meta object literal for the '<em><b>EOperation0</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation REQUIREMENT___EOPERATION0 = eINSTANCE.getRequirement__EOperation0();
-
-		/**
 		 * The meta object literal for the '{@link tosca_yaml_standard.impl.OperationImpl <em>Operation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2660,20 +2467,12 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 		EClass SERVICE_TEMPLATE = eINSTANCE.getService_Template();
 
 		/**
-		 * The meta object literal for the '<em><b>Tosca definition version</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Tosca definitions version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION = eINSTANCE.getService_Template_Tosca_definition_version();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICE_TEMPLATE__DESCRIPTION = eINSTANCE.getService_Template_Description();
+		EAttribute SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION = eINSTANCE.getService_Template_Tosca_definitions_version();
 
 		/**
 		 * The meta object literal for the '<em><b>Service Template has Import</b></em>' containment reference list feature.
@@ -2768,6 +2567,14 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 		EClass INSTANCE = eINSTANCE.getinstance();
 
 		/**
+		 * The meta object literal for the '<em><b>Deploy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INSTANCE__DEPLOY = eINSTANCE.getinstance_Deploy();
+
+		/**
 		 * The meta object literal for the '{@link tosca_yaml_standard.impl.ParametersImpl <em>Parameters</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2784,16 +2591,6 @@ public interface Tosca_yaml_standardPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARAMETERS__PAREMETERS_HAS_PARAMETER = eINSTANCE.getParameters_Paremeters_hasParameter();
-
-		/**
-		 * The meta object literal for the '{@link tosca_yaml_standard.impl.Property_parameterImpl <em>Property parameter</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tosca_yaml_standard.impl.Property_parameterImpl
-		 * @see tosca_yaml_standard.impl.Tosca_yaml_standardPackageImpl#getProperty_parameter()
-		 * @generated
-		 */
-		EClass PROPERTY_PARAMETER = eINSTANCE.getProperty_parameter();
 
 	}
 

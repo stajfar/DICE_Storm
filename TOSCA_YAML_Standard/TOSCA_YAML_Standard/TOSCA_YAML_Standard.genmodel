@@ -54,7 +54,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Requirement/node"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Requirement/capability_Type_name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Requirement/occurances"/>
-      <genOperations ecoreOperation="TOSCA_YAML_Standard.ecore#//Requirement/EOperation0"/>
     </genClasses>
     <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Operation/operation_name"/>
@@ -64,8 +63,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Operation/executor"/>
     </genClasses>
     <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//Service_Template">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Service_Template/tosca_definition_version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Service_Template/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Service_Template/tosca_definitions_version"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA_YAML_Standard.ecore#//Service_Template/serviceTemplate_hasImport"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA_YAML_Standard.ecore#//Service_Template/serviceTemplate_hasOutput"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA_YAML_Standard.ecore#//Service_Template/interface_hasInput"/>
@@ -78,10 +76,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Import/namespace_uri"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//Import/namespace_prefix"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//instance"/>
+    <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//instance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA_YAML_Standard.ecore#//instance/deploy"/>
+    </genClasses>
     <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//Parameters">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA_YAML_Standard.ecore#//Parameters/Paremeters_hasParameter"/>
     </genClasses>
-    <genClasses ecoreClass="TOSCA_YAML_Standard.ecore#//Property_parameter"/>
   </genPackages>
 </genmodel:GenModel>

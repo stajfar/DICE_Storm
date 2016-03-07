@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Parameters#getParemeters_hasParameter <em>Paremeters has Parameter</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getParameters()
  * @model

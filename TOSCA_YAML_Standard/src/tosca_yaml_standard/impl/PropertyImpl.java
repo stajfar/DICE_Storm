@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import tosca_yaml_standard.Parameters;
 import tosca_yaml_standard.Property;
-import tosca_yaml_standard.Property_parameter;
 import tosca_yaml_standard.Tosca_yaml_standardPackage;
 
 /**
@@ -28,11 +28,11 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.PropertyImpl#getProperty_name <em>Property name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.PropertyImpl#getProperty_hasParameters <em>Property has Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -65,7 +65,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Property_parameter> property_hasParameters;
+	protected EList<Parameters> property_hasParameters;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,9 +112,9 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Property_parameter> getProperty_hasParameters() {
+	public EList<Parameters> getProperty_hasParameters() {
 		if (property_hasParameters == null) {
-			property_hasParameters = new EObjectContainmentEList<Property_parameter>(Property_parameter.class, this, Tosca_yaml_standardPackage.PROPERTY__PROPERTY_HAS_PARAMETERS);
+			property_hasParameters = new EObjectContainmentEList<Parameters>(Parameters.class, this, Tosca_yaml_standardPackage.PROPERTY__PROPERTY_HAS_PARAMETERS);
 		}
 		return property_hasParameters;
 	}
@@ -163,7 +163,7 @@ public class PropertyImpl extends MinimalEObjectImpl.Container implements Proper
 				return;
 			case Tosca_yaml_standardPackage.PROPERTY__PROPERTY_HAS_PARAMETERS:
 				getProperty_hasParameters().clear();
-				getProperty_hasParameters().addAll((Collection<? extends Property_parameter>)newValue);
+				getProperty_hasParameters().addAll((Collection<? extends Parameters>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

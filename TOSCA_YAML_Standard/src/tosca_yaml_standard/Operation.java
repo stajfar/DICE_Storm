@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Operation#getOperation_name <em>Operation name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Operation#getDescription <em>Description</em>}</li>
@@ -20,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tosca_yaml_standard.Operation#getScript <em>Script</em>}</li>
  *   <li>{@link tosca_yaml_standard.Operation#getExecutor <em>Executor</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getOperation()
  * @model

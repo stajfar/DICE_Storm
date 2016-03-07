@@ -2,8 +2,6 @@
  */
 package tosca_yaml_standard.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,13 +24,13 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.RequirementImpl#getRequirement_name <em>Requirement name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.RequirementImpl#getNode <em>Node</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.RequirementImpl#getCapability_Type_name <em>Capability Type name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.RequirementImpl#getOccurances <em>Occurances</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -206,17 +204,6 @@ public class RequirementImpl extends MinimalEObjectImpl.Container implements Req
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void EOperation0() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -300,21 +287,6 @@ public class RequirementImpl extends MinimalEObjectImpl.Container implements Req
 				return occurances != null && !occurances.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case Tosca_yaml_standardPackage.REQUIREMENT___EOPERATION0:
-				EOperation0();
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

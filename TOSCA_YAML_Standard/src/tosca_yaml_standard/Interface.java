@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Interface#getInterface_name <em>Interface name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Interface#getHasOperation <em>Has Operation</em>}</li>
  *   <li>{@link tosca_yaml_standard.Interface#getInterface_hasInput <em>Interface has Input</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getInterface()
  * @model

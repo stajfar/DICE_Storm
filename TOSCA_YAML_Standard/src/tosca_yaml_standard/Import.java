@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Import#getImport_name <em>Import name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Import#getFile <em>File</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link tosca_yaml_standard.Import#getNamespace_uri <em>Namespace uri</em>}</li>
  *   <li>{@link tosca_yaml_standard.Import#getNamespace_prefix <em>Namespace prefix</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getImport()
  * @model

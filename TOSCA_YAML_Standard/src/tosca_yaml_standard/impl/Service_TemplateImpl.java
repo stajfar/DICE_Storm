@@ -31,58 +31,37 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
- *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getTosca_definition_version <em>Tosca definition version</em>}</li>
- *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getTosca_definitions_version <em>Tosca definitions version</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getServiceTemplate_hasImport <em>Service Template has Import</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getServiceTemplate_hasOutput <em>Service Template has Output</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getInterface_hasInput <em>Interface has Input</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.Service_TemplateImpl#getService_hasNodeTemplate <em>Service has Node Template</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
 public class Service_TemplateImpl extends MinimalEObjectImpl.Container implements Service_Template {
 	/**
-	 * The default value of the '{@link #getTosca_definition_version() <em>Tosca definition version</em>}' attribute.
+	 * The default value of the '{@link #getTosca_definitions_version() <em>Tosca definitions version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTosca_definition_version()
+	 * @see #getTosca_definitions_version()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TOSCA_DEFINITION_VERSION_EDEFAULT = null;
+	protected static final String TOSCA_DEFINITIONS_VERSION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTosca_definition_version() <em>Tosca definition version</em>}' attribute.
+	 * The cached value of the '{@link #getTosca_definitions_version() <em>Tosca definitions version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTosca_definition_version()
+	 * @see #getTosca_definitions_version()
 	 * @generated
 	 * @ordered
 	 */
-	protected String tosca_definition_version = TOSCA_DEFINITION_VERSION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	protected String tosca_definitions_version = TOSCA_DEFINITIONS_VERSION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getServiceTemplate_hasImport() <em>Service Template has Import</em>}' containment reference list.
@@ -148,8 +127,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTosca_definition_version() {
-		return tosca_definition_version;
+	public String getTosca_definitions_version() {
+		return tosca_definitions_version;
 	}
 
 	/**
@@ -157,32 +136,11 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTosca_definition_version(String newTosca_definition_version) {
-		String oldTosca_definition_version = tosca_definition_version;
-		tosca_definition_version = newTosca_definition_version;
+	public void setTosca_definitions_version(String newTosca_definitions_version) {
+		String oldTosca_definitions_version = tosca_definitions_version;
+		tosca_definitions_version = newTosca_definitions_version;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION, oldTosca_definition_version, tosca_definition_version));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Tosca_yaml_standardPackage.SERVICE_TEMPLATE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION, oldTosca_definitions_version, tosca_definitions_version));
 	}
 
 	/**
@@ -261,10 +219,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION:
-				return getTosca_definition_version();
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__DESCRIPTION:
-				return getDescription();
+			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION:
+				return getTosca_definitions_version();
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT:
 				return getServiceTemplate_hasImport();
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_OUTPUT:
@@ -286,11 +242,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION:
-				setTosca_definition_version((String)newValue);
-				return;
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__DESCRIPTION:
-				setDescription((String)newValue);
+			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION:
+				setTosca_definitions_version((String)newValue);
 				return;
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT:
 				getServiceTemplate_hasImport().clear();
@@ -320,11 +273,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION:
-				setTosca_definition_version(TOSCA_DEFINITION_VERSION_EDEFAULT);
-				return;
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
+			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION:
+				setTosca_definitions_version(TOSCA_DEFINITIONS_VERSION_EDEFAULT);
 				return;
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT:
 				getServiceTemplate_hasImport().clear();
@@ -350,10 +300,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION:
-				return TOSCA_DEFINITION_VERSION_EDEFAULT == null ? tosca_definition_version != null : !TOSCA_DEFINITION_VERSION_EDEFAULT.equals(tosca_definition_version);
-			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION:
+				return TOSCA_DEFINITIONS_VERSION_EDEFAULT == null ? tosca_definitions_version != null : !TOSCA_DEFINITIONS_VERSION_EDEFAULT.equals(tosca_definitions_version);
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT:
 				return serviceTemplate_hasImport != null && !serviceTemplate_hasImport.isEmpty();
 			case Tosca_yaml_standardPackage.SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_OUTPUT:
@@ -376,10 +324,8 @@ public class Service_TemplateImpl extends MinimalEObjectImpl.Container implement
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (tosca_definition_version: ");
-		result.append(tosca_definition_version);
-		result.append(", description: ");
-		result.append(description);
+		result.append(" (tosca_definitions_version: ");
+		result.append(tosca_definitions_version);
 		result.append(')');
 		return result.toString();
 	}

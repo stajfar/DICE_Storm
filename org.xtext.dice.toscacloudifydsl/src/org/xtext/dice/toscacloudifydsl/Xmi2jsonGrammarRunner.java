@@ -58,9 +58,10 @@ public static void main(String[] args) throws IOException {
 		
 		
 		// this part calls the python file	Json2YAMLConverter.py to convert json to its yaml representation	
-		try {//org.xtext.dice.toscacloudifydsl
+		try {
+			//Note: to be able to execute the following python script you have to install "YAML plug in" on your ubuntu 
 			Process p = Runtime.getRuntime().exec("python ./src/org/xtext/dice/toscacloudifydsl/Json2YAMLConverter.py ./"+OutputModelPath+".json"+  " ./"+OutputModelPath+".yaml");
-		
+		   
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

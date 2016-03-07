@@ -7,8 +7,7 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Service_Template returns Service_Template:
 // change type of Estring to STRING so xtext will generate "Double quotations" automatically	
 	'{'
-		('"tosca_definition_version" :' tosca_definition_version=STRING)?
-		('\n, "description" :' description=STRING)?
+		('"tosca_definitions_version" :' tosca_definitions_version=STRING)?		
 		('\n, "imports" :' '[' serviceTemplate_hasImport+=Import ( "," serviceTemplate_hasImport+=Import)* ']' )?		
 		('\n, "inputs" :' '{' interface_hasInput+=Input ( "," interface_hasInput+=Input)* '}' )?
 		 '\n, "node_templates" :' '{' service_hasNodeTemplate+=Node_template ( "," service_hasNodeTemplate+=Node_template)* '}' 
@@ -117,12 +116,18 @@ Interface_Impl returns Interface:
 Property returns Property:
 	{Property}	
 	property_name=STRING ':'
-	'{'
-		( property_hasParameters+=Property_parameter ( "," property_hasParameters+=Property_parameter)*  )?
-	'}';
+	'['
+		(property_hasParameters+=Parameters ( "," property_hasParameters+=Parameters)*  )?
+	']';
+Parameters returns Parameters:
+	{Parameters}
+	'{'	
+		( Paremeters_hasParameter+=Parameter ( "," Paremeters_hasParameter+=Parameter)*)?
+	'}'
+	;
 
-Property_parameter returns Property_parameter:
-	{Property_parameter}
+Parameter_Impl returns Parameter:
+	{Parameter}
 	
 	parameter_name=STRING ':'
 	//'{'
@@ -135,7 +140,8 @@ Property_parameter returns Property_parameter:
 	//'}'
 	;
 
-	
+Parameter returns Parameter:
+	Parameter_Impl | Attribute | Input | Output;	
 
 
 Attribute returns Attribute:
@@ -172,17 +178,8 @@ Relationship_Impl returns Relationship:
 	'}';
 	
 instance returns instance:
-	{instance}
 	
-	parameter_name=STRING ':'
-	//'{'
-		//('type' type=STRING)?
-		//('description' description=STRING)?
-		(value=STRING)?
-		//('required' required=STRING)?
-		//('default' default=STRING)?
-		//('status' status=STRING)?
-	//'}'
+		'"deploy" :' deploy=EInt
 	;
 
 Operation returns Operation:
@@ -236,5 +233,8 @@ Connected_to returns Connected_to:
 		('relation_haSourceInterface' '{' relation_haSourceInterface+=Source_interface ( "," relation_haSourceInterface+=Source_interface)* '}' )?
 		('relation_hasTargetInterface' '{' relation_hasTargetInterface+=Target_interface ( "," relation_hasTargetInterface+=Target_interface)* '}' )?
 	'}';
+	
+EInt returns ecore::EInt:
+	'-'? INT;
 
 

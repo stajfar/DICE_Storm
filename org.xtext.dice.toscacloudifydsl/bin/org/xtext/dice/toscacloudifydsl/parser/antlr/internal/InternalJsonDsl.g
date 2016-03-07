@@ -81,15 +81,15 @@ ruleService_Template returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_0());
     }
-(	otherlv_1='"tosca_definition_version" :' 
+(	otherlv_1='"tosca_definitions_version" :' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getService_TemplateAccess().getTosca_definition_versionKeyword_1_0());
+    	newLeafNode(otherlv_1, grammarAccess.getService_TemplateAccess().getTosca_definitions_versionKeyword_1_0());
     }
 (
 (
-		lv_tosca_definition_version_2_0=RULE_STRING
+		lv_tosca_definitions_version_2_0=RULE_STRING
 		{
-			newLeafNode(lv_tosca_definition_version_2_0, grammarAccess.getService_TemplateAccess().getTosca_definition_versionSTRINGTerminalRuleCall_1_1_0()); 
+			newLeafNode(lv_tosca_definitions_version_2_0, grammarAccess.getService_TemplateAccess().getTosca_definitions_versionSTRINGTerminalRuleCall_1_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -97,46 +97,46 @@ ruleService_Template returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"tosca_definition_version",
-        		lv_tosca_definition_version_2_0, 
-        		"STRING");
+       			"tosca_definitions_version",
+        		lv_tosca_definitions_version_2_0, 
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
-))?(	otherlv_3='\n, "description" :' 
+))?(	otherlv_3='\n, "imports" :' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getService_TemplateAccess().getDescriptionKeyword_2_0());
+    	newLeafNode(otherlv_3, grammarAccess.getService_TemplateAccess().getImportsKeyword_2_0());
     }
-(
-(
-		lv_description_4_0=RULE_STRING
-		{
-			newLeafNode(lv_description_4_0, grammarAccess.getService_TemplateAccess().getDescriptionSTRINGTerminalRuleCall_2_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getService_TemplateRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"description",
-        		lv_description_4_0, 
-        		"STRING");
-	    }
-
-)
-))?(	otherlv_5='\n, "imports" :' 
+	otherlv_4='[' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getService_TemplateAccess().getImportsKeyword_3_0());
-    }
-	otherlv_6='[' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getService_TemplateAccess().getLeftSquareBracketKeyword_3_1());
+    	newLeafNode(otherlv_4, grammarAccess.getService_TemplateAccess().getLeftSquareBracketKeyword_2_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasImportImportParserRuleCall_3_2_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasImportImportParserRuleCall_2_2_0()); 
+	    }
+		lv_serviceTemplate_hasImport_5_0=ruleImport		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getService_TemplateRule());
+	        }
+       		add(
+       			$current, 
+       			"serviceTemplate_hasImport",
+        		lv_serviceTemplate_hasImport_5_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Import");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getService_TemplateAccess().getCommaKeyword_2_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasImportImportParserRuleCall_2_3_1_0()); 
 	    }
 		lv_serviceTemplate_hasImport_7_0=ruleImport		{
 	        if ($current==null) {
@@ -146,49 +146,49 @@ ruleService_Template returns [EObject current=null]
        			$current, 
        			"serviceTemplate_hasImport",
         		lv_serviceTemplate_hasImport_7_0, 
-        		"Import");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Import");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_8=',' 
+))*	otherlv_8=']' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getService_TemplateAccess().getCommaKeyword_3_3_0());
+    	newLeafNode(otherlv_8, grammarAccess.getService_TemplateAccess().getRightSquareBracketKeyword_2_4());
+    }
+)?(	otherlv_9='\n, "inputs" :' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getService_TemplateAccess().getInputsKeyword_3_0());
+    }
+	otherlv_10='{' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_3_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasImportImportParserRuleCall_3_3_1_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getInterface_hasInputInputParserRuleCall_3_2_0()); 
 	    }
-		lv_serviceTemplate_hasImport_9_0=ruleImport		{
+		lv_interface_hasInput_11_0=ruleInput		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getService_TemplateRule());
 	        }
        		add(
        			$current, 
-       			"serviceTemplate_hasImport",
-        		lv_serviceTemplate_hasImport_9_0, 
-        		"Import");
+       			"interface_hasInput",
+        		lv_interface_hasInput_11_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Input");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_10=']' 
+)(	otherlv_12=',' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getService_TemplateAccess().getRightSquareBracketKeyword_3_4());
-    }
-)?(	otherlv_11='\n, "inputs" :' 
-    {
-    	newLeafNode(otherlv_11, grammarAccess.getService_TemplateAccess().getInputsKeyword_4_0());
-    }
-	otherlv_12='{' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_4_1());
+    	newLeafNode(otherlv_12, grammarAccess.getService_TemplateAccess().getCommaKeyword_3_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getInterface_hasInputInputParserRuleCall_4_2_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getInterface_hasInputInputParserRuleCall_3_3_1_0()); 
 	    }
 		lv_interface_hasInput_13_0=ruleInput		{
 	        if ($current==null) {
@@ -198,49 +198,49 @@ ruleService_Template returns [EObject current=null]
        			$current, 
        			"interface_hasInput",
         		lv_interface_hasInput_13_0, 
-        		"Input");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Input");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_14=',' 
+))*	otherlv_14='}' 
     {
-    	newLeafNode(otherlv_14, grammarAccess.getService_TemplateAccess().getCommaKeyword_4_3_0());
+    	newLeafNode(otherlv_14, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_3_4());
+    }
+)?	otherlv_15='\n, "node_templates" :' 
+    {
+    	newLeafNode(otherlv_15, grammarAccess.getService_TemplateAccess().getNode_templatesKeyword_4());
+    }
+	otherlv_16='{' 
+    {
+    	newLeafNode(otherlv_16, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_5());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getInterface_hasInputInputParserRuleCall_4_3_1_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getService_hasNodeTemplateNode_templateParserRuleCall_6_0()); 
 	    }
-		lv_interface_hasInput_15_0=ruleInput		{
+		lv_service_hasNodeTemplate_17_0=ruleNode_template		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getService_TemplateRule());
 	        }
        		add(
        			$current, 
-       			"interface_hasInput",
-        		lv_interface_hasInput_15_0, 
-        		"Input");
+       			"service_hasNodeTemplate",
+        		lv_service_hasNodeTemplate_17_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Node_template");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_16='}' 
+)(	otherlv_18=',' 
     {
-    	newLeafNode(otherlv_16, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_4_4());
-    }
-)?	otherlv_17='\n, "node_templates" :' 
-    {
-    	newLeafNode(otherlv_17, grammarAccess.getService_TemplateAccess().getNode_templatesKeyword_5());
-    }
-	otherlv_18='{' 
-    {
-    	newLeafNode(otherlv_18, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_18, grammarAccess.getService_TemplateAccess().getCommaKeyword_7_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getService_hasNodeTemplateNode_templateParserRuleCall_7_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getService_hasNodeTemplateNode_templateParserRuleCall_7_1_0()); 
 	    }
 		lv_service_hasNodeTemplate_19_0=ruleNode_template		{
 	        if ($current==null) {
@@ -250,49 +250,49 @@ ruleService_Template returns [EObject current=null]
        			$current, 
        			"service_hasNodeTemplate",
         		lv_service_hasNodeTemplate_19_0, 
-        		"Node_template");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Node_template");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_20=',' 
+))*	otherlv_20='}' 
     {
-    	newLeafNode(otherlv_20, grammarAccess.getService_TemplateAccess().getCommaKeyword_8_0());
+    	newLeafNode(otherlv_20, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_8());
+    }
+(	otherlv_21='\n, "outputs" :' 
+    {
+    	newLeafNode(otherlv_21, grammarAccess.getService_TemplateAccess().getOutputsKeyword_9_0());
+    }
+	otherlv_22='{' 
+    {
+    	newLeafNode(otherlv_22, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_9_1());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getService_hasNodeTemplateNode_templateParserRuleCall_8_1_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasOutputOutputParserRuleCall_9_2_0()); 
 	    }
-		lv_service_hasNodeTemplate_21_0=ruleNode_template		{
+		lv_serviceTemplate_hasOutput_23_0=ruleOutput		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getService_TemplateRule());
 	        }
        		add(
        			$current, 
-       			"service_hasNodeTemplate",
-        		lv_service_hasNodeTemplate_21_0, 
-        		"Node_template");
+       			"serviceTemplate_hasOutput",
+        		lv_serviceTemplate_hasOutput_23_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Output");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_22='}' 
+)(	otherlv_24=',' 
     {
-    	newLeafNode(otherlv_22, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_9());
-    }
-(	otherlv_23='\n, "outputs" :' 
-    {
-    	newLeafNode(otherlv_23, grammarAccess.getService_TemplateAccess().getOutputsKeyword_10_0());
-    }
-	otherlv_24='{' 
-    {
-    	newLeafNode(otherlv_24, grammarAccess.getService_TemplateAccess().getLeftCurlyBracketKeyword_10_1());
+    	newLeafNode(otherlv_24, grammarAccess.getService_TemplateAccess().getCommaKeyword_9_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasOutputOutputParserRuleCall_10_2_0()); 
+	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasOutputOutputParserRuleCall_9_3_1_0()); 
 	    }
 		lv_serviceTemplate_hasOutput_25_0=ruleOutput		{
 	        if ($current==null) {
@@ -302,40 +302,18 @@ ruleService_Template returns [EObject current=null]
        			$current, 
        			"serviceTemplate_hasOutput",
         		lv_serviceTemplate_hasOutput_25_0, 
-        		"Output");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Output");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_26=',' 
+))*	otherlv_26='}' 
     {
-    	newLeafNode(otherlv_26, grammarAccess.getService_TemplateAccess().getCommaKeyword_10_3_0());
+    	newLeafNode(otherlv_26, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_9_4());
     }
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getService_TemplateAccess().getServiceTemplate_hasOutputOutputParserRuleCall_10_3_1_0()); 
-	    }
-		lv_serviceTemplate_hasOutput_27_0=ruleOutput		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getService_TemplateRule());
-	        }
-       		add(
-       			$current, 
-       			"serviceTemplate_hasOutput",
-        		lv_serviceTemplate_hasOutput_27_0, 
-        		"Output");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-))*	otherlv_28='}' 
+)?	otherlv_27='}' 
     {
-    	newLeafNode(otherlv_28, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_10_4());
-    }
-)?	otherlv_29='}' 
-    {
-    	newLeafNode(otherlv_29, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_11());
+    	newLeafNode(otherlv_27, grammarAccess.getService_TemplateAccess().getRightCurlyBracketKeyword_10());
     }
 )
 ;
@@ -480,7 +458,7 @@ ruleImport returns [EObject current=null]
        			$current, 
        			"file",
         		lv_file_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -525,7 +503,7 @@ ruleOutput returns [EObject current=null]
        			$current, 
        			"parameter_name",
         		lv_parameter_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -555,7 +533,7 @@ ruleOutput returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_5_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -577,7 +555,7 @@ ruleOutput returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_7_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -626,7 +604,7 @@ ruleInput returns [EObject current=null]
        			$current, 
        			"parameter_name",
         		lv_parameter_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -652,7 +630,7 @@ ruleInput returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -674,7 +652,7 @@ ruleInput returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_6_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -696,7 +674,7 @@ ruleInput returns [EObject current=null]
        			$current, 
        			"default",
         		lv_default_8_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -745,7 +723,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"node_template_name",
         		lv_node_template_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -775,7 +753,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_5_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -797,7 +775,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_7_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -822,7 +800,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasInterface",
         		lv_nodeTemplate_hasInterface_10_0, 
-        		"Interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -844,7 +822,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasInterface",
         		lv_nodeTemplate_hasInterface_12_0, 
-        		"Interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -874,7 +852,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasProperty",
         		lv_nodeTemplate_hasProperty_16_0, 
-        		"Property");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Property");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -896,7 +874,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasProperty",
         		lv_nodeTemplate_hasProperty_18_0, 
-        		"Property");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Property");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -926,7 +904,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasAttribute",
         		lv_nodeTemplate_hasAttribute_22_0, 
-        		"Attribute");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -948,7 +926,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasAttribute",
         		lv_nodeTemplate_hasAttribute_24_0, 
-        		"Attribute");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Attribute");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -978,7 +956,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasRequirement",
         		lv_nodeTemplate_hasRequirement_28_0, 
-        		"Requirement");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Requirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1000,7 +978,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasRequirement",
         		lv_nodeTemplate_hasRequirement_30_0, 
-        		"Requirement");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Requirement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1030,7 +1008,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"NodeTemplate_hasRelationship",
         		lv_NodeTemplate_hasRelationship_34_0, 
-        		"Relationship");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Relationship");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1052,7 +1030,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"NodeTemplate_hasRelationship",
         		lv_NodeTemplate_hasRelationship_36_0, 
-        		"Relationship");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Relationship");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1082,7 +1060,7 @@ ruleNode_template returns [EObject current=null]
        			$current, 
        			"nodeTemplate_hasInstances",
         		lv_nodeTemplate_hasInstances_40_0, 
-        		"instance");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.instance");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1136,7 +1114,7 @@ ruleInterface_Impl returns [EObject current=null]
        			$current, 
        			"interface_name",
         		lv_interface_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1161,7 +1139,7 @@ ruleInterface_Impl returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_4_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1183,7 +1161,7 @@ ruleInterface_Impl returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_6_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1233,7 +1211,7 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"property_name",
         		lv_property_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1241,16 +1219,16 @@ ruleProperty returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getPropertyAccess().getColonKeyword_2());
     }
-	otherlv_3='{' 
+	otherlv_3='[' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getPropertyAccess().getLeftSquareBracketKeyword_3());
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPropertyAccess().getProperty_hasParametersProperty_parameterParserRuleCall_4_0_0()); 
+	        newCompositeNode(grammarAccess.getPropertyAccess().getProperty_hasParametersParametersParserRuleCall_4_0_0()); 
 	    }
-		lv_property_hasParameters_4_0=ruleProperty_parameter		{
+		lv_property_hasParameters_4_0=ruleParameters		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPropertyRule());
 	        }
@@ -1258,7 +1236,7 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"property_hasParameters",
         		lv_property_hasParameters_4_0, 
-        		"Property_parameter");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Parameters");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1270,9 +1248,9 @@ ruleProperty returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getPropertyAccess().getProperty_hasParametersProperty_parameterParserRuleCall_4_1_1_0()); 
+	        newCompositeNode(grammarAccess.getPropertyAccess().getProperty_hasParametersParametersParserRuleCall_4_1_1_0()); 
 	    }
-		lv_property_hasParameters_6_0=ruleProperty_parameter		{
+		lv_property_hasParameters_6_0=ruleParameters		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPropertyRule());
 	        }
@@ -1280,14 +1258,14 @@ ruleProperty returns [EObject current=null]
        			$current, 
        			"property_hasParameters",
         		lv_property_hasParameters_6_0, 
-        		"Property_parameter");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Parameters");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*)?	otherlv_7='}' 
+))*)?	otherlv_7=']' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_7, grammarAccess.getPropertyAccess().getRightSquareBracketKeyword_5());
     }
 )
 ;
@@ -1296,67 +1274,202 @@ ruleProperty returns [EObject current=null]
 
 
 
-// Entry rule entryRuleProperty_parameter
-entryRuleProperty_parameter returns [EObject current=null] 
+// Entry rule entryRuleParameters
+entryRuleParameters returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getProperty_parameterRule()); }
-	 iv_ruleProperty_parameter=ruleProperty_parameter 
-	 { $current=$iv_ruleProperty_parameter.current; } 
+	{ newCompositeNode(grammarAccess.getParametersRule()); }
+	 iv_ruleParameters=ruleParameters 
+	 { $current=$iv_ruleParameters.current; } 
 	 EOF 
 ;
 
-// Rule Property_parameter
-ruleProperty_parameter returns [EObject current=null] 
+// Rule Parameters
+ruleParameters returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 ((
     {
         $current = forceCreateModelElement(
-            grammarAccess.getProperty_parameterAccess().getProperty_parameterAction_0(),
+            grammarAccess.getParametersAccess().getParametersAction_0(),
+            $current);
+    }
+)	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getParametersAccess().getLeftCurlyBracketKeyword_1());
+    }
+((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getParametersAccess().getParemeters_hasParameterParameterParserRuleCall_2_0_0()); 
+	    }
+		lv_Paremeters_hasParameter_2_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getParametersRule());
+	        }
+       		add(
+       			$current, 
+       			"Paremeters_hasParameter",
+        		lv_Paremeters_hasParameter_2_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3=',' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getParametersAccess().getCommaKeyword_2_1_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getParametersAccess().getParemeters_hasParameterParameterParserRuleCall_2_1_1_0()); 
+	    }
+		lv_Paremeters_hasParameter_4_0=ruleParameter		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getParametersRule());
+	        }
+       		add(
+       			$current, 
+       			"Paremeters_hasParameter",
+        		lv_Paremeters_hasParameter_4_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Parameter");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)?	otherlv_5='}' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getParametersAccess().getRightCurlyBracketKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleParameter_Impl
+entryRuleParameter_Impl returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getParameter_ImplRule()); }
+	 iv_ruleParameter_Impl=ruleParameter_Impl 
+	 { $current=$iv_ruleParameter_Impl.current; } 
+	 EOF 
+;
+
+// Rule Parameter_Impl
+ruleParameter_Impl returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getParameter_ImplAccess().getParameterAction_0(),
             $current);
     }
 )(
 (
 		lv_parameter_name_1_0=RULE_STRING
 		{
-			newLeafNode(lv_parameter_name_1_0, grammarAccess.getProperty_parameterAccess().getParameter_nameSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_parameter_name_1_0, grammarAccess.getParameter_ImplAccess().getParameter_nameSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getProperty_parameterRule());
+	            $current = createModelElement(grammarAccess.getParameter_ImplRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"parameter_name",
         		lv_parameter_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
 )	otherlv_2=':' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getProperty_parameterAccess().getColonKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getParameter_ImplAccess().getColonKeyword_2());
     }
 (
 (
 		lv_value_3_0=RULE_STRING
 		{
-			newLeafNode(lv_value_3_0, grammarAccess.getProperty_parameterAccess().getValueSTRINGTerminalRuleCall_3_0()); 
+			newLeafNode(lv_value_3_0, grammarAccess.getParameter_ImplAccess().getValueSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getProperty_parameterRule());
+	            $current = createModelElement(grammarAccess.getParameter_ImplRule());
 	        }
        		setWithLastConsumed(
        			$current, 
        			"value",
         		lv_value_3_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
 )?)
+;
+
+
+
+
+
+// Entry rule entryRuleParameter
+entryRuleParameter returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getParameterRule()); }
+	 iv_ruleParameter=ruleParameter 
+	 { $current=$iv_ruleParameter.current; } 
+	 EOF 
+;
+
+// Rule Parameter
+ruleParameter returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getParameterAccess().getParameter_ImplParserRuleCall_0()); 
+    }
+    this_Parameter_Impl_0=ruleParameter_Impl
+    { 
+        $current = $this_Parameter_Impl_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getParameterAccess().getAttributeParserRuleCall_1()); 
+    }
+    this_Attribute_1=ruleAttribute
+    { 
+        $current = $this_Attribute_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getParameterAccess().getInputParserRuleCall_2()); 
+    }
+    this_Input_2=ruleInput
+    { 
+        $current = $this_Input_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getParameterAccess().getOutputParserRuleCall_3()); 
+    }
+    this_Output_3=ruleOutput
+    { 
+        $current = $this_Output_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
 ;
 
 
@@ -1401,7 +1514,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"parameter_name",
         		lv_parameter_name_2_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1427,7 +1540,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_5_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1449,7 +1562,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_7_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1471,7 +1584,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"value",
         		lv_value_9_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1493,7 +1606,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"required",
         		lv_required_11_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1515,7 +1628,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"default",
         		lv_default_13_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1537,7 +1650,7 @@ ruleAttribute returns [EObject current=null]
        			$current, 
        			"status",
         		lv_status_15_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1598,7 +1711,7 @@ ruleRequirement returns [EObject current=null]
        			$current, 
        			"requirement_name",
         		lv_requirement_name_4_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1620,7 +1733,7 @@ ruleRequirement returns [EObject current=null]
        			$current, 
        			"node",
         		lv_node_6_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1642,7 +1755,7 @@ ruleRequirement returns [EObject current=null]
        			$current, 
        			"capability_Type_name",
         		lv_capability_Type_name_8_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1668,7 +1781,7 @@ ruleRequirement returns [EObject current=null]
        			$current, 
        			"occurances",
         		lv_occurances_11_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1690,7 +1803,7 @@ ruleRequirement returns [EObject current=null]
        			$current, 
        			"occurances",
         		lv_occurances_13_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1751,7 +1864,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_3_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1773,7 +1886,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"validSource",
         		lv_validSource_5_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1795,7 +1908,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"validTarget",
         		lv_validTarget_7_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -1820,7 +1933,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_10_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1842,7 +1955,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_12_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1872,7 +1985,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_16_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1894,7 +2007,7 @@ ruleRelationship_Impl returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_18_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1928,53 +2041,29 @@ ruleinstance returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
+(	otherlv_0='"deploy" :' 
     {
-        $current = forceCreateModelElement(
-            grammarAccess.getInstanceAccess().getInstanceAction_0(),
-            $current);
-    }
-)(
-(
-		lv_parameter_name_1_0=RULE_STRING
-		{
-			newLeafNode(lv_parameter_name_1_0, grammarAccess.getInstanceAccess().getParameter_nameSTRINGTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInstanceRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"parameter_name",
-        		lv_parameter_name_1_0, 
-        		"STRING");
-	    }
-
-)
-)	otherlv_2=':' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getInstanceAccess().getColonKeyword_2());
+    	newLeafNode(otherlv_0, grammarAccess.getInstanceAccess().getDeployKeyword_0());
     }
 (
 (
-		lv_value_3_0=RULE_STRING
-		{
-			newLeafNode(lv_value_3_0, grammarAccess.getInstanceAccess().getValueSTRINGTerminalRuleCall_3_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getInstanceAccess().getDeployEIntParserRuleCall_1_0()); 
+	    }
+		lv_deploy_1_0=ruleEInt		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getInstanceRule());
+	            $current = createModelElementForParent(grammarAccess.getInstanceRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
-       			"value",
-        		lv_value_3_0, 
-        		"STRING");
+       			"deploy",
+        		lv_deploy_1_0, 
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.EInt");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)?)
+))
 ;
 
 
@@ -2015,7 +2104,7 @@ ruleOperation returns [EObject current=null]
        			$current, 
        			"operation_name",
         		lv_operation_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2037,7 +2126,7 @@ ruleOperation returns [EObject current=null]
        			$current, 
        			"script",
         		lv_script_3_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2082,7 +2171,7 @@ ruleSource_interface returns [EObject current=null]
        			$current, 
        			"interface_name",
         		lv_interface_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2107,7 +2196,7 @@ ruleSource_interface returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_4_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2129,7 +2218,7 @@ ruleSource_interface returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_6_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2179,7 +2268,7 @@ ruleTarget_interface returns [EObject current=null]
        			$current, 
        			"interface_name",
         		lv_interface_name_1_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2212,7 +2301,7 @@ ruleTarget_interface returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_6_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2234,7 +2323,7 @@ ruleTarget_interface returns [EObject current=null]
        			$current, 
        			"hasOperation",
         		lv_hasOperation_8_0, 
-        		"Operation");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Operation");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2300,7 +2389,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2322,7 +2411,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"validSource",
         		lv_validSource_6_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2344,7 +2433,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"validTarget",
         		lv_validTarget_8_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2369,7 +2458,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_11_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2391,7 +2480,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_13_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2421,7 +2510,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_17_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2443,7 +2532,7 @@ ruleContained_in returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_19_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2509,7 +2598,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"type",
         		lv_type_4_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2531,7 +2620,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"validSource",
         		lv_validSource_6_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2553,7 +2642,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"validTarget",
         		lv_validTarget_8_0, 
-        		"STRING");
+        		"org.eclipse.xtext.common.Terminals.STRING");
 	    }
 
 )
@@ -2578,7 +2667,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_11_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2600,7 +2689,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"relation_haSourceInterface",
         		lv_relation_haSourceInterface_13_0, 
-        		"Source_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Source_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2630,7 +2719,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_17_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2652,7 +2741,7 @@ ruleConnected_to returns [EObject current=null]
        			$current, 
        			"relation_hasTargetInterface",
         		lv_relation_hasTargetInterface_19_0, 
-        		"Target_interface");
+        		"org.xtext.dice.toscacloudifydsl.JsonDsl.Target_interface");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2667,6 +2756,40 @@ ruleConnected_to returns [EObject current=null]
     }
 )
 ;
+
+
+
+
+
+// Entry rule entryRuleEInt
+entryRuleEInt returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getEIntRule()); } 
+	 iv_ruleEInt=ruleEInt 
+	 { $current=$iv_ruleEInt.current.getText(); }  
+	 EOF 
+;
+
+// Rule EInt
+ruleEInt returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+	kw='-' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
+    }
+)?    this_INT_1=RULE_INT    {
+		$current.merge(this_INT_1);
+    }
+
+    { 
+    newLeafNode(this_INT_1, grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
+    }
+)
+    ;
 
 
 

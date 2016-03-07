@@ -11,8 +11,6 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Target interface</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */

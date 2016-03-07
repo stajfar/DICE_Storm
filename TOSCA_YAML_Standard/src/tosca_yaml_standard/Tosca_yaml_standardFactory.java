@@ -184,15 +184,6 @@ public interface Tosca_yaml_standardFactory extends EFactory {
 	Parameters createParameters();
 
 	/**
-	 * Returns a new object of class '<em>Property parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Property parameter</em>'.
-	 * @generated
-	 */
-	Property_parameter createProperty_parameter();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -13,13 +13,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Requirement#getRequirement_name <em>Requirement name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Requirement#getNode <em>Node</em>}</li>
  *   <li>{@link tosca_yaml_standard.Requirement#getCapability_Type_name <em>Capability Type name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Requirement#getOccurances <em>Occurances</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getRequirement()
  * @model
@@ -119,13 +119,5 @@ public interface Requirement extends EObject {
 	 * @generated
 	 */
 	EList<String> getOccurances();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void EOperation0();
 
 } // Requirement

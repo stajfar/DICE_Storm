@@ -74,7 +74,6 @@ public class Tosca_yaml_standardFactoryImpl extends EFactoryImpl implements Tosc
 			case Tosca_yaml_standardPackage.IMPORT: return createImport();
 			case Tosca_yaml_standardPackage.INSTANCE: return createinstance();
 			case Tosca_yaml_standardPackage.PARAMETERS: return createParameters();
-			case Tosca_yaml_standardPackage.PROPERTY_PARAMETER: return createProperty_parameter();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -258,16 +257,6 @@ public class Tosca_yaml_standardFactoryImpl extends EFactoryImpl implements Tosc
 	public Parameters createParameters() {
 		ParametersImpl parameters = new ParametersImpl();
 		return parameters;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Property_parameter createProperty_parameter() {
-		Property_parameterImpl property_parameter = new Property_parameterImpl();
-		return property_parameter;
 	}
 
 	/**

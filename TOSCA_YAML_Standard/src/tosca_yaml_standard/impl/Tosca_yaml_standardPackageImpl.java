@@ -4,7 +4,6 @@ package tosca_yaml_standard.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,7 +21,6 @@ import tosca_yaml_standard.Output;
 import tosca_yaml_standard.Parameter;
 import tosca_yaml_standard.Parameters;
 import tosca_yaml_standard.Property;
-import tosca_yaml_standard.Property_parameter;
 import tosca_yaml_standard.Relationship;
 import tosca_yaml_standard.Requirement;
 import tosca_yaml_standard.Service_Template;
@@ -164,13 +162,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * @generated
 	 */
 	private EClass parametersEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass property_parameterEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -625,15 +616,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRequirement__EOperation0() {
-		return requirementEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOperation() {
 		return operationEClass;
 	}
@@ -697,7 +679,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getService_Template_Tosca_definition_version() {
+	public EAttribute getService_Template_Tosca_definitions_version() {
 		return (EAttribute)service_TemplateEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -706,17 +688,8 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getService_Template_Description() {
-		return (EAttribute)service_TemplateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getService_Template_ServiceTemplate_hasImport() {
-		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(2);
+		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -725,7 +698,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * @generated
 	 */
 	public EReference getService_Template_ServiceTemplate_hasOutput() {
-		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(3);
+		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -734,7 +707,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * @generated
 	 */
 	public EReference getService_Template_Interface_hasInput() {
-		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(4);
+		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -743,7 +716,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * @generated
 	 */
 	public EReference getService_Template_Service_hasNodeTemplate() {
-		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(5);
+		return (EReference)service_TemplateEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -814,6 +787,15 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getinstance_Deploy() {
+		return (EAttribute)instanceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParameters() {
 		return parametersEClass;
 	}
@@ -825,15 +807,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 	 */
 	public EReference getParameters_Paremeters_hasParameter() {
 		return (EReference)parametersEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getProperty_parameter() {
-		return property_parameterEClass;
 	}
 
 	/**
@@ -919,7 +892,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		createEAttribute(requirementEClass, REQUIREMENT__NODE);
 		createEAttribute(requirementEClass, REQUIREMENT__CAPABILITY_TYPE_NAME);
 		createEAttribute(requirementEClass, REQUIREMENT__OCCURANCES);
-		createEOperation(requirementEClass, REQUIREMENT___EOPERATION0);
 
 		operationEClass = createEClass(OPERATION);
 		createEAttribute(operationEClass, OPERATION__OPERATION_NAME);
@@ -929,8 +901,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		createEAttribute(operationEClass, OPERATION__EXECUTOR);
 
 		service_TemplateEClass = createEClass(SERVICE_TEMPLATE);
-		createEAttribute(service_TemplateEClass, SERVICE_TEMPLATE__TOSCA_DEFINITION_VERSION);
-		createEAttribute(service_TemplateEClass, SERVICE_TEMPLATE__DESCRIPTION);
+		createEAttribute(service_TemplateEClass, SERVICE_TEMPLATE__TOSCA_DEFINITIONS_VERSION);
 		createEReference(service_TemplateEClass, SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_IMPORT);
 		createEReference(service_TemplateEClass, SERVICE_TEMPLATE__SERVICE_TEMPLATE_HAS_OUTPUT);
 		createEReference(service_TemplateEClass, SERVICE_TEMPLATE__INTERFACE_HAS_INPUT);
@@ -944,11 +915,10 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		createEAttribute(importEClass, IMPORT__NAMESPACE_PREFIX);
 
 		instanceEClass = createEClass(INSTANCE);
+		createEAttribute(instanceEClass, INSTANCE__DEPLOY);
 
 		parametersEClass = createEClass(PARAMETERS);
 		createEReference(parametersEClass, PARAMETERS__PAREMETERS_HAS_PARAMETER);
-
-		property_parameterEClass = createEClass(PROPERTY_PARAMETER);
 	}
 
 	/**
@@ -986,8 +956,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		attributeEClass.getESuperTypes().add(this.getParameter());
 		inputEClass.getESuperTypes().add(this.getParameter());
 		outputEClass.getESuperTypes().add(this.getParameter());
-		instanceEClass.getESuperTypes().add(this.getParameter());
-		property_parameterEClass.getESuperTypes().add(this.getParameter());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(node_templateEClass, Node_template.class, "Node_template", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1032,7 +1000,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProperty_Property_name(), ecorePackage.getEString(), "property_name", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProperty_Property_hasParameters(), this.getProperty_parameter(), null, "property_hasParameters", null, 0, -1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProperty_Property_hasParameters(), this.getParameters(), null, "property_hasParameters", null, 0, -1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1046,8 +1014,6 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		initEAttribute(getRequirement_Capability_Type_name(), ecorePackage.getEString(), "capability_Type_name", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirement_Occurances(), ecorePackage.getEString(), "occurances", null, 0, 2, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getRequirement__EOperation0(), null, "EOperation0", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOperation_Operation_name(), ecorePackage.getEString(), "operation_name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getOperation_Description(), ecorePackage.getEString(), "description", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1056,8 +1022,7 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		initEAttribute(getOperation_Executor(), ecorePackage.getEString(), "executor", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(service_TemplateEClass, Service_Template.class, "Service_Template", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getService_Template_Tosca_definition_version(), ecorePackage.getEString(), "tosca_definition_version", null, 0, 1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getService_Template_Description(), ecorePackage.getEString(), "description", null, 0, 1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getService_Template_Tosca_definitions_version(), ecorePackage.getEString(), "tosca_definitions_version", null, 0, 1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Template_ServiceTemplate_hasImport(), this.getImport(), null, "serviceTemplate_hasImport", null, 0, -1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Template_ServiceTemplate_hasOutput(), this.getOutput(), null, "serviceTemplate_hasOutput", null, 0, -1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getService_Template_Interface_hasInput(), this.getInput(), null, "interface_hasInput", null, 0, -1, Service_Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1071,11 +1036,10 @@ public class Tosca_yaml_standardPackageImpl extends EPackageImpl implements Tosc
 		initEAttribute(getImport_Namespace_prefix(), ecorePackage.getEString(), "namespace_prefix", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(instanceEClass, instance.class, "instance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getinstance_Deploy(), ecorePackage.getEInt(), "deploy", null, 1, 1, instance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parametersEClass, Parameters.class, "Parameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getParameters_Paremeters_hasParameter(), this.getParameter(), null, "Paremeters_hasParameter", null, 0, -1, Parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(property_parameterEClass, Property_parameter.class, "Property_parameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

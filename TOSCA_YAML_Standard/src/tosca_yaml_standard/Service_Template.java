@@ -13,15 +13,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
- *   <li>{@link tosca_yaml_standard.Service_Template#getTosca_definition_version <em>Tosca definition version</em>}</li>
- *   <li>{@link tosca_yaml_standard.Service_Template#getDescription <em>Description</em>}</li>
+ *   <li>{@link tosca_yaml_standard.Service_Template#getTosca_definitions_version <em>Tosca definitions version</em>}</li>
  *   <li>{@link tosca_yaml_standard.Service_Template#getServiceTemplate_hasImport <em>Service Template has Import</em>}</li>
  *   <li>{@link tosca_yaml_standard.Service_Template#getServiceTemplate_hasOutput <em>Service Template has Output</em>}</li>
  *   <li>{@link tosca_yaml_standard.Service_Template#getInterface_hasInput <em>Interface has Input</em>}</li>
  *   <li>{@link tosca_yaml_standard.Service_Template#getService_hasNodeTemplate <em>Service has Node Template</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getService_Template()
  * @model
@@ -29,56 +28,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Service_Template extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Tosca definition version</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tosca definitions version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tosca definition version</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Tosca definitions version</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tosca definition version</em>' attribute.
-	 * @see #setTosca_definition_version(String)
-	 * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getService_Template_Tosca_definition_version()
-	 * @model
+	 * @return the value of the '<em>Tosca definitions version</em>' attribute.
+	 * @see #setTosca_definitions_version(String)
+	 * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getService_Template_Tosca_definitions_version()
+	 * @model id="true"
 	 * @generated
 	 */
-	String getTosca_definition_version();
+	String getTosca_definitions_version();
 
 	/**
-	 * Sets the value of the '{@link tosca_yaml_standard.Service_Template#getTosca_definition_version <em>Tosca definition version</em>}' attribute.
+	 * Sets the value of the '{@link tosca_yaml_standard.Service_Template#getTosca_definitions_version <em>Tosca definitions version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tosca definition version</em>' attribute.
-	 * @see #getTosca_definition_version()
+	 * @param value the new value of the '<em>Tosca definitions version</em>' attribute.
+	 * @see #getTosca_definitions_version()
 	 * @generated
 	 */
-	void setTosca_definition_version(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
-	 * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getService_Template_Description()
-	 * @model
-	 * @generated
-	 */
-	String getDescription();
-
-	/**
-	 * Sets the value of the '{@link tosca_yaml_standard.Service_Template#getDescription <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
-	 * @see #getDescription()
-	 * @generated
-	 */
-	void setDescription(String value);
+	void setTosca_definitions_version(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Service Template has Import</b></em>' containment reference list.

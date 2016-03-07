@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.Property#getProperty_name <em>Property name</em>}</li>
  *   <li>{@link tosca_yaml_standard.Property#getProperty_hasParameters <em>Property has Parameters</em>}</li>
  * </ul>
- * </p>
  *
  * @see tosca_yaml_standard.Tosca_yaml_standardPackage#getProperty()
  * @model
@@ -52,7 +52,7 @@ public interface Property extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Property has Parameters</b></em>' containment reference list.
-	 * The list contents are of type {@link tosca_yaml_standard.Property_parameter}.
+	 * The list contents are of type {@link tosca_yaml_standard.Parameters}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Property has Parameters</em>' containment reference list isn't clear,
@@ -64,6 +64,6 @@ public interface Property extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Property_parameter> getProperty_hasParameters();
+	EList<Parameters> getProperty_hasParameters();
 
 } // Property

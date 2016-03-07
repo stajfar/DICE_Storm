@@ -29,12 +29,12 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.InterfaceImpl#getInterface_name <em>Interface name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.InterfaceImpl#getHasOperation <em>Has Operation</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.InterfaceImpl#getInterface_hasInput <em>Interface has Input</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

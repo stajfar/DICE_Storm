@@ -140,10 +140,6 @@ public class Tosca_yaml_standardAdapterFactory extends AdapterFactoryImpl {
 				return createParametersAdapter();
 			}
 			@Override
-			public Adapter caseProperty_parameter(Property_parameter object) {
-				return createProperty_parameterAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -412,20 +408,6 @@ public class Tosca_yaml_standardAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParametersAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link tosca_yaml_standard.Property_parameter <em>Property parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see tosca_yaml_standard.Property_parameter
-	 * @generated
-	 */
-	public Adapter createProperty_parameterAdapter() {
 		return null;
 	}
 

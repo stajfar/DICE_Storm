@@ -18,6 +18,7 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.ParameterImpl#getParameter_name <em>Parameter name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.ParameterImpl#getType <em>Type</em>}</li>
@@ -27,7 +28,6 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  *   <li>{@link tosca_yaml_standard.impl.ParameterImpl#getDefault <em>Default</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.ParameterImpl#getStatus <em>Status</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

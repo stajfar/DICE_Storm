@@ -28,6 +28,7 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link tosca_yaml_standard.impl.OperationImpl#getOperation_name <em>Operation name</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.OperationImpl#getDescription <em>Description</em>}</li>
@@ -35,7 +36,6 @@ import tosca_yaml_standard.Tosca_yaml_standardPackage;
  *   <li>{@link tosca_yaml_standard.impl.OperationImpl#getScript <em>Script</em>}</li>
  *   <li>{@link tosca_yaml_standard.impl.OperationImpl#getExecutor <em>Executor</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
